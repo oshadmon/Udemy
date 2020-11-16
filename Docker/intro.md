@@ -25,7 +25,7 @@
    * Docker is native for linux 
    * RHEL CE (yam based) is under Centos 
    * [Docker Machine](https://docs.docker.com/machine/overview/) - Install and managee virtual docker hosts 
-   * [Docker Compse](https://docs.docker.com/compose/overview/ - Allows for multiple containers (docker instances) to run on a single node using Dockerfile
+   * [Docker Compse](https://docs.docker.com/compose/overview/) - Allows for multiple containers (docker instances) to run on a single node using Dockerfile
 
 
 ```

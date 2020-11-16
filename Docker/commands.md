@@ -1,5 +1,9 @@
 # Docker Commands
 
+## Difference between __Image__ and __Container__ 
+   * **Image** - The actual application
+   * **Container** - Running instance of the image 
+
 ## Basic Commands 
    * `docker` - list of commands (ie help)
    * `docker version` - get docker version 
@@ -13,6 +17,3 @@
    * `docker rm` - remove docker package 
    * `docker rmi` - remove docker image
 
-## Difference between __Image__ and __Container__ 
-   * **Image** - The actual application
-   * **Container** - Running instance of the image 
