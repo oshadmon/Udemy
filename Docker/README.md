@@ -5,7 +5,7 @@
 
 ## Course Covers
 * Introduction
-  * [General info & Install]((intro.md)) 
+  * [General info & Install](intro.md) 
   * [Commands](commands.md) 
 * Image Basics
   * [Alpine OS](alpine.md) 
