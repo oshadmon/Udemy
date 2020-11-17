@@ -1,14 +1,17 @@
 # Docker 
 
-* [Coursera Docker Course](https://www.udemy.com/course/docker-mastery/) 
+* [Docker Mastery with Kubernetes + Swarm from a Docker Captain](https://www.udemy.com/course/docker-mastery/) 
 * [GitHub](https://github.com/BretFisher/udemy-docker-mastery)
 
-## Course Covers 
-* Docker Install  
-* Container Basics
+## Course Covers
+* Introduction
+  * [General info & Install]((intro.md)) 
+  * [Commands](commands.md) 
 * Image Basics
-* Docker Networking
-* Docker Volumes
+  * [Alpine OS](alpine.md) 
+  * [Images](images.md) 
+* [Networking](networking.md)
+* [Presistent Data & Volumes](persistent_data.md)
 * Docker Composer
 * Orchestration
 * Swarm
