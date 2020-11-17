@@ -1,3 +1,5 @@
+# Introduction to TypeScript
+
 ## What is TypeScript: 
 * A JavaScript (JS) superset -- it takes JS and adds ontop of it 
 * It cannot be executed like JS 
@@ -19,3 +21,15 @@
 * [using-ts.ts](using-ts.ts) - Example of how to add 2 values in TypeScript
 * [using-ts.js](using-ts.js) - Compelation of TypeScript 
 * [javascript_vs_typescript.html](javascript_vs_typescript.html) - HTML call to both JavaScript files in order to show difference in behavior
+
+## TypeScript Overview 
+* Adds type explicits 
+* IDE Support 
+* Next-gen JavaScript features to support multi-version browsers 
+* Adds features for error support 
+    * interfaces 
+    * generic 
+* Meta-programming - like decorators 
+* config options 
+* Support for non-TypeScript projects 
+
