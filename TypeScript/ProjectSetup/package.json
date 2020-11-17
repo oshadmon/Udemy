@@ -1,7 +1,7 @@
 {
   "name": "projectsetup",
   "version": "1.0.0",
-  "description": "",
+  "description": "The following is the base for TypeScript projects",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +11,5 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
-  }
+  
 }
