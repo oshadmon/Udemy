@@ -8,6 +8,9 @@
     * TypeScript Basics 
     * Compilare & Configuration 
     * [ProjectSetup](ProjectSetup/) 
+* [Section2](Section2/)
+    * [Basic JavaScript Types](Section2/basic-javascript.ts)
+    * [Basic TypeScript Types](Section2/basic-typescript.ts)
 * Next-Gen JavaScript 
 * Classes & Interfaces 
 * Advanced Types & Features 
