@@ -84,3 +84,16 @@ function combine(input1:number_string, input2:number_string){
     }
     return result 
 }
+* TypeScript allows to set return type @ the end of functions
+```
+/**
+ * Add two numbers 
+ * @param {*} n1 - number to add 
+ * @param {*} n2 - number to add 
+ * @returns - numberic value that's the sum of n1 + n2
+ */
+function add(n1:number, n2:number):number{ 
+    return n1 + n2; 
+}
+```
+* Cases where there's no return value it's considered `void` return
