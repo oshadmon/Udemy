@@ -39,6 +39,4 @@ docker rm `docker ps -a | grep -v CONTAINER | awk -F " " '{print $1}'`
 ```
 docker volume prune 
 ```
-. Sending data 
-```
 
