@@ -32,12 +32,12 @@ curl http://localhost:48081/api/v1/deviceservice/name/device-random 2> /dev/null
 
 * Device Profile
 ```
-curl http://localhost:48081/api/v1/deviceprofile/name/Random-Integer-Generator
+curl http://localhost:48081/api/v1/deviceprofile/name/Random-Integer-Generator 2> /dev/null | jq 
 ```
 
 * Device created
 ```
-curl http://localhost:48081/api/v1/device/name/Random-Integer-Generator01	
+curl http://localhost:48081/api/v1/device/name/Random-Integer-Generator01 2> /dev/null | jq 	
 ```
 
 * Events (values) created by the random integer generator device
@@ -45,6 +45,6 @@ curl http://localhost:48081/api/v1/device/name/Random-Integer-Generator01
 curl http://localhost:48080/api/v1/event 2> /dev/null | jq 
 
 # this allows for a limit in the number of rows returned 
-curl http://localhost:48080/api/v1/event/device/Random-Integer-Generator01/10 | jq 
+curl http://localhost:48080/api/v1/event/device/Random-Integer-Generator01/10 2> /dev/null | jq 
 ```
 
