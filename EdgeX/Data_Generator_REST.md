@@ -1,4 +1,5 @@
 # Random Data 
+## Install 
 1. Within doocker-compose.yaml remove the section within [device-random](https://docs.edgexfoundry.org/1.2/examples/Ch-ExamplesRandomDeviceService/) 
 ```
 device-random:
@@ -22,35 +23,28 @@ device-random:
 docker-compose up -d device-random
 ```
 
-3. View data 
-```
-# By replacing N-rows the command shows the first N rows 
-curl http://localhost:48080/api/v1/event/device/Random-Integer-Generator01/100
+## Sample Commands
 
-# Example
-ubuntu@edgex:~/edgex$ curl http://139.162.205.95:48080/api/v1/event/device/Random-Integer-Generator01/1 | jq 
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   348  100   348    0     0  31636      0 --:--:-- --:--:-- --:--:-- 34800
-[
-  {
-    "id": "bb5ef69a-4eb4-483c-a493-cf399864db89",
-    "device": "Random-Integer-Generator01",
-    "created": 1615683743224,
-    "origin": 1615683743223265300,
-    "readings": [
-      {
-        "id": "f530c474-2b8c-4936-8031-c4e43b7fa41f",
-        "created": 1615683743224,
-        "origin": 1615683743223221500,
-        "device": "Random-Integer-Generator01",
-        "name": "RandomValue_Int8",
-        "value": "122",
-        "valueType": "Int8"
-      }
-    ]
-  }
-]
+* Device Service
 ```
- 
+curl http://localhost:48081/api/v1/deviceservice/name/device-random 2> /dev/null | jq 
+```
+
+* Device Profile
+```
+curl http://localhost:48081/api/v1/deviceprofile/name/Random-Integer-Generator
+```
+
+* Device created
+```
+curl http://localhost:48081/api/v1/device/name/Random-Integer-Generator01	
+```
+
+* Events (values) created by the random integer generator device
+```
+curl http://localhost:48080/api/v1/event 2> /dev/null | jq 
+
+# this allows for a limit in the number of rows returned 
+curl http://localhost:48080/api/v1/event/device/Random-Integer-Generator01/10 | jq 
+```
 
