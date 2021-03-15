@@ -53,4 +53,4 @@ ubuntu@edgex:~/edgex$ curl http://139.162.205.95:48080/api/v1/event/device/Rando
 ]
 ```
  
-4. Sending data 
+

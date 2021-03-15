@@ -5,13 +5,13 @@
 1. Create directory EdgeX (`mkdir $HOME/edgex ; cd $HOME/edgex`) - All commands will be within this directory unless stated otherwise 
 
 2. Download EdgeX file 
-   * [x86](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-hanoi-no-secty.yml) 
+  * [x86](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-geneva-redis-no-secty.yml)
 ```
-curl https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-hanoi-no-secty.yml -o docker-compose.yml
+curl https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-geneva-redis-no-secty.yml -o docker-compose.yml
 ```
-   * [ARM](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-hanoi-no-secty-arm64.yml) 
+  * [ARM](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-geneva-redis-no-secty-arm64.yml) 
 ```
-curl https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-hanoi-no-secty-arm64.yml -o docker-compose.yml
+curl https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-geneva-redis-no-secty-arm64.yml -o docker-compose.yml
 ```
 
 3. Update docker-compose.yml to contain machine IP rather than 127.0.0.1 
