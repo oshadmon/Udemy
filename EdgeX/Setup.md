@@ -1,7 +1,11 @@
 # Setup & Install 
 
 ## Prerequisite
-*  [Install Docker & Docker-compose](../Docker/install_docker.sh)
+* [Install Docker & Docker-compose](../Docker/install_docker.sh)
+* [Linux JQ](https://www.educba.com/linux-jq/) 
+```
+sudo apt-get -y install jq
+```
 
 ## Download EdgeX Docker Image 
 1. Create directory EdgeX (`mkdir $HOME/edgex ; cd $HOME/edgex`) - All commands will be within this directory unless stated otherwise 
