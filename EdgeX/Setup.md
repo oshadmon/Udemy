@@ -51,9 +51,7 @@ docker volume prune
 ```
 
 ## Notes 
-* By default EdgeX is configured to support local curl (ie `localhost` or `127.0.0.1`); however, by replacing `127.0.0.1` with the physical IP commands can be done remotely. 
-
-Note, when doing so, you need to restart EdgeX & use the physical IP rather than `localhost` as the examples show. 
+* By default EdgeX is configured to support local curl (ie `localhost` or `127.0.0.1`); however, by replacing `127.0.0.1` with the physical IP commands can be done remotely. Note, when doing so, you need to restart EdgeX & use the physical IP rather than `localhost` as the examples show. 
 ```
 sed -i 's/127.0.0.1/${IP}/g' docker-comppse.yaml
 ```
