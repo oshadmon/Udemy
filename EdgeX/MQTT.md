@@ -1,10 +1,8 @@
 # MQTT 
 
-The original documentation suggest using [HiveMQTT](https://www.hivemq.com/) rather than [CloudMQTT](https://www.cloudmqtt.com/). 
+## HiveMQ  process install 
 
-## Install 
-
-1. Uncomment MQTT section 
+1. In docker-compose.yml add `app-service-mqtt` bellow `rulesengine` (roughly line 255)  
 ```
   app-service-mqtt:
     image: edgexfoundry/docker-app-service-configurable:1.1.0
@@ -31,13 +29,56 @@ The original documentation suggest using [HiveMQTT](https://www.hivemq.com/) rat
       - data
 ```
 
-2. Update MQTT information
-   * **MQTT Address**: `broker.mqttdashboard.com` --> `driver.cloudmqtt.com`
-   * **MQTT Port**: 1883 --> 18896
-   * **MQTT Publisher**: `edgex` --> `kqypbmie`
-
-3. Start MQTT 
+2. Start MQTT 
 ```
 docker-compose up -d
 ```
 
+3. Visit [HiveMQTT](http://hivemq.com/demos/websocket-client/) & "connect" 
+
+4. Set _Add a new Topic Subscription_ to `EdgeXEvents` & data should appear in _Messages_ section. 
+
+## CloudMQTT 
+
+Process Link: https://fuji-docs.edgexfoundry.org/Ch-APIExportClientRegistration-MQTT.html
+
+1. Create a new [CloudMQTT](https://cloudmqtt.com/) Topic
+
+2. Within the new topic access _Users & ACL_
+
+3. Add new user
+   --> **Username**: exportpublisher
+   --> **Password**: edgex4AnyLog!
+
+4. Add a topic & access rights (_ACL_ section)
+   --> topic 
+   --> **Pattern**: edgexdatatopic
+
+5. Add `export-client` to docker-compose.yml 
+Note, I was unable to run the process only with [EdgeX v1.1 Fuji](https://github.com/edgexfoundry/developer-scripts/blob/master/releases/fuji/compose-files/docker-compose-fuji-no-secty.yml) 
+```
+  export-client:
+    image: edgexfoundry/docker-export-client-go:1.1.0
+    ports:
+      - "48071:48071"
+    container_name: edgex-export-client
+    hostname: edgex-export-client
+    networks:
+      - edgex-network
+    environment:
+      <<: *common-variables
+    volumes:
+      - db-data:/data/db
+      - log-data:/edgex/logs
+      - consul-config:/consul/config
+      - consul-data:/consul/data
+    depends_on:
+      - data
+```
+
+6. Start `export-client` process
+```
+docker-compose up -d export-client
+```
+
+7. 
