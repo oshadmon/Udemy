@@ -21,6 +21,7 @@ curl https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/rel
 ## Start / Stop Docker Image 
 1. Start docker-compose - redirects output to file rather than screen  
 ```
+docker-compose pull 
 docker-compose up > output.err 2>&1 & 
 ```
 
@@ -51,6 +52,7 @@ docker volume prune
 
 ## Notes 
 * By default EdgeX is configured to support local curl (ie `localhost` or `127.0.0.1`); however, by replacing `127.0.0.1` with the physical IP commands can be done remotely. 
+
 Note, when doing so, you need to restart EdgeX & use the physical IP rather than `localhost` as the examples show. 
 ```
 sed -i 's/127.0.0.1/${IP}/g' docker-comppse.yaml

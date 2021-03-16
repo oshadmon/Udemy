@@ -1,25 +1,37 @@
 # Random Data 
 ## Install 
-1. Within doocker-compose.yaml remove the section within [device-random](https://docs.edgexfoundry.org/1.2/examples/Ch-ExamplesRandomDeviceService/) 
+1. Add [device-random](https://docs.edgexfoundry.org/1.0/examples/Ch-ExamplesRandomDeviceService/) secition to docker-compose.yaml
 ```
-device-random:
-    image: edgexfoundry/docker-device-random-go:1.2.1
-    ports:
-      - "127.0.0.1:49988:49988"
+  device-random:
     container_name: edgex-device-random
-    hostname: edgex-device-random
-    networks:
-      - edgex-network
-    environment:
-      <<: *common-variables
-     Service_Host: edgex-device-random
     depends_on:
+      - consul
       - data
-      - command
+      - metadata
+    environment:
+      CLIENTS_COMMAND_HOST: edgex-core-command
+      CLIENTS_COREDATA_HOST: edgex-core-data
+      CLIENTS_DATA_HOST: edgex-core-data
+      CLIENTS_METADATA_HOST: edgex-core-metadata
+      CLIENTS_NOTIFICATIONS_HOST: edgex-support-notifications
+      CLIENTS_RULESENGINE_HOST: edgex-kuiper
+      CLIENTS_SCHEDULER_HOST: edgex-support-scheduler
+      CLIENTS_VIRTUALDEVICE_HOST: edgex-device-random
+      DATABASES_PRIMARY_HOST: edgex-redis
+      EDGEX_SECURITY_SECRET_STORE: "false"
+      REGISTRY_HOST: edgex-core-consul
+      Service_Host: edgex-device-random
+    hostname: edgex-device-random
+    image: edgexfoundry/docker-device-random-go:1.3.0
+    networks:
+      edgex-network: {}
+    ports:
+    - 127.0.0.1:49988:49988/tcp
 ``` 
 
 2. Enable Random Data by rerunning `docker-compose.yml` 
 ```
+docker-compose pull 
 docker-compose up -d device-random
 ```
 
