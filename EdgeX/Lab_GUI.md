@@ -30,7 +30,7 @@ docker-compose up -d
 
 ### Steps
 1. In _Services_ section of the docker-compose.yml add the following lines for Portainer to be enabled 
-````
+```
 portainer:
   image: portainer/portainer
   ports:
