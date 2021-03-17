@@ -59,3 +59,5 @@ docker-compose up -d
 ```
 
 **Note**:  If you'd like, you could add both sets of UIs in one process
+
+Next Section: [Adding Devices](Lab_Devices.md)
