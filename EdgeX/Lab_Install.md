@@ -1,5 +1,3 @@
-URL: https://jonamiki.com/wp-content/uploads/2020/08/EdgeX-Foundry-tutorial-ver1.1.pdf
-
 # EdgeX SetUp process 
 0. create a directory from which work is done unless stated otherwise 
 ```
