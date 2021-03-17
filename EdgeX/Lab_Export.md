@@ -124,7 +124,7 @@ docker-compose up -d app-service-mqtt
   #      - logging  # uncomment if re-enabled remote logging
         - data
 ```
-**Note**: Update _"YOUR-UNIQUE"_ with correct information 
+**Note**: Update _"YOUR-UNIQUE-?"_ with correct information 
 
 3. In [docker-compose.yml](docker-compose_step2.yml) uncomment _rulesengine_
 ```

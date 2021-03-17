@@ -1,4 +1,4 @@
-# EdgX GUI Options
+# EdgeX GUI Options
 
 ## EdgexUI 
    * **Link**: http://127.0.0.1:4000
@@ -57,7 +57,5 @@ volumes:
 docker-compose pull 
 docker-compose up -d 
 ```
-
 **Note**:  If you'd like, you could add both sets of UIs in one process
 
-Next Section: [Adding Devices](Lab_Devices.md)

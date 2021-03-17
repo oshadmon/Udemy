@@ -1,4 +1,4 @@
-# EdgeX SetUp process 
+# EdgeX Setup process 
 0. create a directory from which work is done unless stated otherwise 
 ```
 mkdir edgex 
@@ -46,7 +46,3 @@ docker-compose down
 # Remove volumes whe removing containers 
 docker-comopose down -v 
 ```
-
-Next Section: [Adding GUI](Lab_GUI.md)
-
-

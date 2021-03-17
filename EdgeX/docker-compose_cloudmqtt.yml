@@ -47,7 +47,7 @@ volumes:
   log-data:
   consul-config:
   consul-data:
-
+  portainer_data:
 services:
   consul:
     image: edgexfoundry/docker-edgex-consul:1.2.0
@@ -77,6 +77,26 @@ services:
       <<: *common-variables
     volumes:
       - db-data:/data:z
+
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "0.0.0.0:9000:9000"
+    container_name: portainer
+    command: -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:z
+      - portainer_data:/data
+
+  ui:
+    container_name: edgex-ui-go
+    hostname: edgex-ui-go
+    image: nexus3.edgexfoundry.org:10004/docker-edgex-ui-go:master
+    networks:
+      edgex-network: null
+    ports:
+      - "0.0.0.0:4000:4000/tcp"
+    read_only: true
 
 # The logging service has been deprecated in Geneva release and will be removed in the Hanoi release.
 # All services are configure to send logging to STDOUT, i.e. not remote which requires this logging service
@@ -251,16 +271,16 @@ services:
         MessageBus_SubscribeHost_Host: edgex-core-data
         Binding_PublishTopic: events
         # Added for MQTT export using app service
-        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_ADDRESS: broker.hivemq.com
-        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PORT: 1883
+        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_ADDRESS: driver.cloudmqtt.com
+        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PORT: 18785
         WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PROTOCOL: tcp
-        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_TOPIC: "YOUR-UNIQUE-TOPIC"
+        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_TOPIC: "anylogedgex"
         WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_AUTORECONNECT: "true"
         WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_RETAIN: "true"
         WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_PERSISTONERROR: "false"
         # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PUBLISHER: 
-        # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_USER: 
-        # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PASSWORD:
+        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_USER: "ibglowct" 
+        WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_ADDRESSABLE_PASSWORD: "MSY4e009J7ts"
         # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_QOS: ["your quality or service"]
         # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_KEY: [your Key]  
         # WRITABLE_PIPELINE_FUNCTIONS_MQTTSEND_PARAMETERS_CERT: [your Certificate]
@@ -327,20 +347,20 @@ services:
       - command
   #      - logging  # uncomment if re-enabled remote logging
 
-#  device-random:
-#    image: edgexfoundry/docker-device-random-go:1.2.1
-#    ports:
-#      - "0.0.0.0:49988:49988"
-#    container_name: edgex-device-random
-#    hostname: edgex-device-random
-#    networks:
-#      - edgex-network
-#    environment:
-#      <<: *common-variables
-#      Service_Host: edgex-device-random
-#    depends_on:
-#      - data
-#      - command
+  device-random:
+    image: edgexfoundry/docker-device-random-go:1.2.1
+    ports:
+      - "0.0.0.0:49988:49988"
+    container_name: edgex-device-random
+    hostname: edgex-device-random
+    networks:
+      - edgex-network
+    environment:
+      <<: *common-variables
+      Service_Host: edgex-device-random
+    depends_on:
+      - data
+      - command
 #
 #  device-mqtt:
 #    image: edgexfoundry/docker-device-mqtt-go:1.2.1

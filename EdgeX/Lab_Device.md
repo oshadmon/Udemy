@@ -51,7 +51,3 @@ Result for createValueDescriptors #2: <Response [200]> - Message: fb27d3ea-407a-
 Result of uploading device profile: <Response [200]> with message 10263a43-99fc-4d13-9809-8cb64a6f1eb1
 Result for addNewDevice: <Response [404]> - Message: no item found for supplied key: invalid device service: edgex-device-rest 
 ```
-
-
-Next Section: [Random Data Generator](Lab_Random.md)
-
