@@ -52,11 +52,28 @@ curl http://localhost:48081/api/v1/deviceprofile/name/Random-Integer-Generator 2
 curl http://localhost:48081/api/v1/device/name/Random-Integer-Generator01 2> /dev/null | jq 	
 ```
 
-* Events (values) created by the random integer generator device
+* Events created
 ```
+# Get all events 
 curl http://localhost:48080/api/v1/event 2> /dev/null | jq 
 
 # this allows for a limit in the number of rows returned 
 curl http://localhost:48080/api/v1/event/device/Random-Integer-Generator01/10 2> /dev/null | jq 
+```
+
+* Get readings from device(s)
+```
+curl http://127.0.0.1:48080/api/v1/reading 2> /dev/null| jq 
+
+# Sample Output
+  {
+    "id": "ff7d9f92-4fa0-4eb5-be8b-0a2e8e61ca3c",
+    "created": 1616002344325,
+    "origin": 1616002344324098300,
+    "device": "Random-Integer-Generator01",
+    "name": "RandomValue_Int32",
+    "value": "1052517020",
+    "valueType": "Int32"
+  }
 ```
 
