@@ -17,5 +17,9 @@ The following are notes based on the [EdgeX Tutorial](https://jonamiki.com/wp-co
 * [Add Device](Lab_Device.md)
 * [Add Random Data Generator](Lab_Random.md) 
 * [Export Data](Lab_Export.md) 
+* [Grafana](Lab_Grafana.md) 
 
+## Notes
+* [Lab Materials](https://github.com/jonas-werner/EdgeX_Tutorial)
+* The original lab uses a RPI with DHT11 sensor
 
