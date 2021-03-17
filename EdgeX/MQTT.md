@@ -31,6 +31,7 @@
 
 2. Start MQTT 
 ```
+docker-compose pull 
 docker-compose up -d
 ```
 
