@@ -1,5 +1,5 @@
 # Export Data 
-
+## HiveMQTT 
 1. In [docker-compose.yml](docker-compose_step2.yml) uncomment _app-service-mqtt_ 
 ```
   app-service-mqtt:
@@ -75,3 +75,12 @@ docker-compose pull
 docker-compose up -d app-service-rules 
 docker-compose up -d app-service-mqtt
 ```
+
+4. Go to [HiveMQTT](http://www.hivemq.com/demos/websocket-client/) 
+
+5. Press "Connect" with default values
+
+7. "Add New Topic Subscription" with _"YOUR-UNIQUE-TOPIC"_
+
+## CloudMQTT
+
