@@ -52,5 +52,6 @@ Result of uploading device profile: <Response [200]> with message 10263a43-99fc-
 Result for addNewDevice: <Response [404]> - Message: no item found for supplied key: invalid device service: edgex-device-rest 
 ```
 
-## Generic REST device 
+
+Next Section: [Random Data Generator](Lab_Random.md)
 

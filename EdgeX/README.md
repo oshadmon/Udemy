@@ -4,7 +4,7 @@ The following are notes based on the [EdgeX Tutorial](https://jonamiki.com/wp-co
 
 ## Version
 * [EdgeX v1.2 Geneva](https://docs.edgexfoundry.org/1.2/getting-started/quick-start/) - LTS Version used for Lab 
-* [EdgeX v2.0 Ireland](https://docs.edgexfoundry.org/2.0/getting-started/quick-start/) -- Latest version
+* [EdgeX v2.0 Ireland](https://docs.edgexfoundry.org/2.0/getting-started/quick-start/) - Latest version
 
 ## Docker Compose Files
 * [docker-compose_step1.yml](docker-compose_step1.yml) - Original Docker-Compose file 
