@@ -44,5 +44,5 @@ curl http://localhost:48082/api/v1/device
 docker-compose down
 
 # Remove volumes whe removing containers 
-docker-comopose down -v 
+docker-compose down -v 
 ```
