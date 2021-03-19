@@ -12,12 +12,19 @@ The following are notes based on the [EdgeX Tutorial](https://jonamiki.com/wp-co
 * [docker-compose_cloudmqtt.yml](docker-compose_cloudmqtt.yml) - Docker-Compose file working with CloudMQTT (Topic: `anylogedgex`) 
 
 ## Sections 
+### Lab 
 * [Install & Setup](Lab_Setup.md) 
 * [Add GUI](Lab_GUI.md) 
 * [Add Device](Lab_Device.md)
 * [Add Random Data Generator](Lab_Random.md) 
 * [Export Data](Lab_Export.md) 
 * [Grafana](Lab_Grafana.md) 
+
+### Kuiper 
+* [Introduction](Kuiper.md) 
+* [Install & Setup](Kuiper_Setup.md) 
+* [Export Data](Kuiper_Export.md) 
+* [Query Data](Kuiper_Query.md) 
 
 ## Notes
 * [Lab Materials](https://github.com/jonas-werner/EdgeX_Tutorial)
