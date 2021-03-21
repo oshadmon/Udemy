@@ -1,15 +1,17 @@
 # Export Data 
 
-0. Validate EdgeX is running with data coming 
 
-1. Create a stream to consume data from EdgeX message bus.
+0. Validate EdgeX is running with data coming 
+```
+curl http://127.0.0.1:48080/api/v1/reading | jq
+```
+
+1. Create a [stream](https://github.com/emqx/kuiper/blob/master/docs/en_US/streams.md) to consume data from EdgeX message bus.
 ```
 curl -X POST \
   http://127.0.0.1:48075/streams \
   -H 'Content-Type: application/json' \
-  -d '{
-  "sql": "create stream demo() WITH (FORMAT=\"JSON\", TYPE=\"edgex\")"
-}'
+  -d '{"sql": "create stream demo() WITH (FORMAT=\"JSON\", TYPE=\"edgex\")"}'
 ```
 
 2. Validate stream was created 

@@ -8,4 +8,6 @@ Kuiper is an edge lightweight IoT data analytics / streaming software implemente
 
 ## Links
 * Project is by [EMQX](https://www.emqx.io/) 
+* [Kuiper on EdgeX](https://docs.edgexfoundry.org/1.2/microservices/support/Kuiper/Ch-Kuiper/) 
+* [EdgeX Rule Engine](https://github.com/emqx/kuiper/blob/master/docs/en_US/edgex/edgex_rule_engine_tutorial.md) 
 

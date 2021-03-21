@@ -25,7 +25,7 @@
 
 2. Start docker-compose
 ```
-docker-compose
+docker-compose up -d
 ```
 
 3. Validate connection
