@@ -13,10 +13,10 @@ docker buildx --help
 
 1. Create a builder instance 
 ```
-docker buildx create --name ${BUILD_NAME} --platforms linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 
+docker buildx create --name ${BUILD_NAME} --platforms linux/amd64,linux/arm64,linux/arm/v7 
 
 # Example
-docker buildx create --name testbuild --platforms linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 
+docker buildx create --name testbuild --platforms linux/amd64,linux/arm64,linux/arm/v7 
 ```
 
 2. To validate 
@@ -39,6 +39,6 @@ docker buildx inspect --bootstrap
 
 5. Build Repo
 ```
-docker buildx build . --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 -t ${BUILD_NAME} 
+docker buildx build . --platform linux/amd64,linux/arm64,linux/arm/v7 -t ${BUILD_NAME} 
 ```
 
