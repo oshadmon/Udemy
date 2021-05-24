@@ -27,8 +27,8 @@ sudo apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # Install Qemu 
-sudo apt-get -y install qemu
-
+sudo apt-get -y install qemu qemu-user-static
+sudo apt-get install -y binfmt-support
 sudo apt-get -y update 
 
 # Permissions 
