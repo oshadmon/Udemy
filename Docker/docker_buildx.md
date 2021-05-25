@@ -28,7 +28,7 @@ default   docker
 
 4. Create buildx env 
 ```
-docker buildx --name ${ENV_NAME}
+docker buildx create --name ${ENV_NAME}
 ```
 
 5. Enable new env 
