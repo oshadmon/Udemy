@@ -35,6 +35,19 @@ docker buildx create --name ${ENV_NAME}
 ```
 docker buildx use ${ENV_NAME}
 docker buildx inspect --bootstrap
+
+# validate (example) 
+user@vm1:~$ docker buildx ls 
+NAME/NODE DRIVER/ENDPOINT             STATUS  PLATFORMS
+test *    docker-container                    
+  test0   unix:///var/run/docker.sock running linux/amd64, linux/386, linux/arm64, linux/ppc64le, linux/s390x, linux/arm/v7, linux/arm/v6
+default   docker                              
+  default default                     running linux/amd64, linux/386, linux/arm64, linux/ppc64le, linux/s390x, linux/arm/v7, linux/arm/v6
+```
+
+6. Build Image
+```
+docker buildx build . --platform linux/amd64,linux/386,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6  -t ${IMAGE_NAME}:${IMAGE_TAG} --push
 ```
 
 ## Links 
