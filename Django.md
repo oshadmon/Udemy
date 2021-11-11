@@ -20,5 +20,5 @@ myproject/
       urls.py
       wsgi.py
 ``` 
-	* **Command**: django-admin startproject myproject
+   * **Command**: `django-admin startproject myproject`
 
