@@ -97,3 +97,4 @@ function add(n1:number, n2:number):number{
 }
 ```
 * Cases where there's no return value it's considered `void` return
+* `unkown` can store any value without getting an error. 
