@@ -1,12 +1,4 @@
-# Django 
-
-Based on https://www.tutorialspoint.com/django/index.htm
-
-## Requirement
-https://www.tutorialspoint.com/django/django_environment.htm
-
-*  Install django - `pip3 install django` 
-
+# Setting Up Project & Application in Django
 
 ## Create a Project
 https://www.tutorialspoint.com/django/django_creating_project.htm 
@@ -26,9 +18,29 @@ myproject/
 2. manage.py help information: `python3.9 manage.py help`
 
 
-3. Run server to make sure it works: `python3.9 manage.py runserver` 
+3. Run server: 
    * To validate, in your browser goto: http://127.0.0.1:8000/
+```bash
+python3.9 manage.py runserver
+
+# To user an connection other than 127.0.0.1:8000 specify IP:PORT connnection info
+python3.9 manage.py runserver ${IP}:${PORT}
+``` 
+ 
 
 
 ## Creating an App  
+https://www.tutorialspoint.com/django/django_apps_life_cycle.htm
+
+1. Create application - create a "myapp" project with the following structure: 
+      * **Command**: `cd myproject ; python3.9 manage.py startapp myapp`
+```buildoutcfg
+myapp/
+   __init__.py 
+   admin.py     <-- make the app modifiable in the admin interface
+   models.py    <-- application models are stored
+   tests.py     <-- unit tests
+   views.py     <-- application views
+```
+
 
