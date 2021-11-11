@@ -6,7 +6,7 @@ imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the `myproject/s
 https://www.tutorialspoint.com/django/django_admin_interface.htm
 
 ## Packages
-* **[Installed Apps](myproject/settings.py#L33)** - Django tools required to be installed  
+* **[Installed Apps](myproject/myproject/settings.py#L33)** - Django tools required to be installed  
 ```python3
 INSTALLED_APPS = (
    'django.contrib.admin',
@@ -19,7 +19,7 @@ INSTALLED_APPS = (
 )
 ```
 
-* **[Middleware](myproject/settings.py#L33)** - Django services required to be configured
+* **[Middleware](myproject/myproject/settings.py#L33)** - Django services required to be configured
 ```python
 MIDDLEWARE_CLASSES = (
    'django.contrib.sessions.middleware.SessionMiddleware',
