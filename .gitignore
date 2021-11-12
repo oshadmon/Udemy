@@ -6,3 +6,4 @@ node_modules/
 *.json 
 *.html
 __init__/
+__pycache__/
