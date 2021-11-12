@@ -22,7 +22,6 @@ def vote(request, question_id):
 2. Updated [polls/urls.py](mysite/polls/urls.py) to support the newly added modules 
 ```python
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
@@ -63,13 +62,6 @@ def index(request):
 
 2. Create [polls/index.html](mysite/polls/templates/polls/index.html) which contains to read [polls/views.py](mysite/polls/views.py)
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -79,8 +71,6 @@ def index(request):
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-</body>
-</html>
 ```
 
 3. 

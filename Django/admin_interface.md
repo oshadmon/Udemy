@@ -6,7 +6,7 @@ imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the `myproject/s
 https://www.tutorialspoint.com/django/django_admin_interface.htm
 
 ## Packages
-* **[Installed Apps](myproject/myproject/settings.py#L33)** - Django tools required to be installed  
+* **[Installed Apps](mysite1/mysite1/settings.py#L33)** - Django tools required to be installed  
 ```python3
 INSTALLED_APPS = (
    'django.contrib.admin',
@@ -18,7 +18,7 @@ INSTALLED_APPS = (
 )
 ```
 
-* **[Middleware](myproject/myproject/settings.py#L33)** - Django services required to be configured
+* **[Middleware](mysite1/mysite1/settings.py#L33)** - Django services required to be configured
 ```python
 MIDDLEWARE_CLASSES = (
    'django.contrib.sessions.middleware.SessionMiddleware',
@@ -32,7 +32,7 @@ MIDDLEWARE_CLASSES = (
 
 ## Configure Admin interface 
 
-0. Make sure you are in `myproject` directory
+0. Make sure you are in `mysite1` directory - `cd $HOME/mysite1`
 
 
 1. Initiate database - syncdb will create necessary tables or collections depending on your db type, necessary for the admin interface to run.
@@ -40,12 +40,12 @@ MIDDLEWARE_CLASSES = (
    
 **Note**: To create a superuser execute: `python3.9 manage.py createsuperuser`
 
-2. Run server - `cd $HOME/myproject ; python3.9 manage.py runserver`
+2. Run server - `python3.9 manage.py runserver`
 
 
 3. Go to admin page & access using the created superuser - http://127.0.0.1:8000/admin/  
 
-If unable to access the admin page on http://127.0.0.1/admin, update [urls.py](myproject/myproject/urls.py) to contain admin path
+If unable to access the admin page on http://127.0.0.1/admin, update [urls.py](mysite1/mysite1/urls.py) to contain admin path
 ```python
 from django.contrib import admin
 from django.urls import path
