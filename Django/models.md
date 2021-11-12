@@ -56,7 +56,7 @@ Migrations for 'polls':
 2. Create a new question (based on [polls/models.py](mysite/polls/models.py)) and save in the database
 ```python
 from polls.models import Choice, Question
-from polls.models import Choice, Question
+from django.utils import timezone
 
 # create a new question
 q = Question(question_text="What's new?", pub_date=timezone.now())
