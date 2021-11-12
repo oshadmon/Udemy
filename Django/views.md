@@ -77,7 +77,7 @@ def index(request):
 
 3. Update migration process 
 ```bash
-cd $HOME/mysite2
+cd $HOME/mysite3
 python3.9 manage.py makemigrations 
 python3.9 manage.py migrate
 python3.9 manage.py showmigrations

@@ -3,7 +3,9 @@
 https://docs.djangoproject.com/en/3.2/intro/tutorial04/
 
 ## Steps 
-1. Create an HTML template for [polls/details.html](mysite/polls/templates/polls/details.html) to contain an updated forms.
+1. Update `vote` related code in [poll/views.py](mysite3/polls/views.py)
+   
+I. Create [polls/details.html](mysite3/polls/templates/polls/details.html)
 ```html
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
@@ -18,8 +20,7 @@ https://docs.djangoproject.com/en/3.2/intro/tutorial04/
 <input type="submit" value="Vote">
 </form>
 ```
-
-2. Update [polls/urls.py](mysite/polls/urls.py) to contain a call to `views.vote` (Note, this was also done in the [previous section](views.md#L33))
+   II. Update polls/urls.py to contain a call to `views.vote` (Note, this was also done in the previous section)
 ```python
 from django.urls import path
 from . import views
@@ -29,19 +30,12 @@ urlpatterns = [
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
 ```
-3. Update content in [polls/views.py][polls/views.py](mysite/polls/views.py#L25) to not be dummy code
-
-    I. Rename `index` method with class `IndexView`
-
-    II. Rename `detail` method with class `Details`
-
-    III. Rename `results` method with class `ResultsView`
-
-    IV. Update the content in `vote` method with the following
+   III. Update `vote` section in [polls/views.py](mysite3/polls/views.py) 
 ```python
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+
 from .models import Choice, Question
 
 def vote(request, question_id):
@@ -61,26 +55,35 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
-
 ```
 
-4. Create an HTML template for [polls/results.html](mysite/polls/templates/poll/results.html)
-```html
-<h1>{{ question.question_text }}</h1>
+2. Update the `results` related code in [poll/views.py](mysite3/polls/views.py) 
+   
+I. Update `results` method in [poll/views.py](mysite3/polls/views.py) 
+   ```python
+     from django.shortcuts import get_object_or_404, render
+     from .models import Choice, Question
+     def results(request, question_id):
+         question = get_object_or_404(Question, pk=question_id)
+     return render(request, 'polls/results.html', {'question': question})
+   ```
+   
+   II. Create [polls/results.html](mysite3/polls/templates/polls/results.html)
+   ```html
+   <h1>{{ question.question_text }}</h1>
+   <ul>
+      {% for choice in question.choice_set.all %}
+         <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+      {% endfor %}
+   </ul>
+   <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+   ```
 
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
+   III. Validate - http://127.0.0.1:8000/polls/1/
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-```
-
-5. Update [polls/urls.py](mysite/polls/urls.py) to support new HTML pages
+3. In [polls/urls.py](mysite3/polls/urls.py) convert `urlpatterns`
 ```python
 from django.urls import path
-
 from . import views
 
 app_name = 'polls'
@@ -89,8 +92,35 @@ urlpatterns = [
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
+]
 ```
 
+4. Convert [polls/views.py] to Django’s generic views
+```python
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
+
+from .models import Choice, Question
 
 
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
 
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.order_by('-pub_date')[:5]
+
+
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+
+
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
+
+```

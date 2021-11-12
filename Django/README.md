@@ -14,6 +14,7 @@ Sections are based on the [mysite/]() directory; where each directory is an impr
   * **Section 5**: [Basic Views](views.md)
 * [mysite3](mysite3/)
   * **Section 6**: [Forms](forms.md)
+  * **Section 7**: [Testing](testing.md)
 
 ## Sites Used
 * [TutorialPoint](https://www.tutorialspoint.com/django/index.htm)
