@@ -40,4 +40,47 @@ urlpatterns = [
    * Question results - http://127.0.0.1:8000/polls/5/results/
    * [Question vote - http://127.0.0.1:8000/polls/5/vote/
 
-## 
+## Interactive Views
+
+* A view is responsible for doing one of two things: 
+  1. returning an _HttpResponse_ object containing the content for the requested page
+  2. raising an exception such as _Http404_
+
+**Example**: displays the latest 5 poll questions in the system, separated by commas, according to publication date
+1. Update [polls/views.py](mysite/polls/views.py) to have an updated index 
+```python
+from django.shortcuts import render
+from django.template import loader
+
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    template = loader.get_template('polls/index.html')
+    context = {
+        'latest_question_list': latest_question_list,
+    }
+    return render(request, 'polls/index.html', {})
+```
+
+2. Create [polls/index.html](mysite/polls/templates/polls/index.html) which contains to read [polls/views.py](mysite/polls/views.py)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
+```
+
+3. 

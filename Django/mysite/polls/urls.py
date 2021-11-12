@@ -1,6 +1,7 @@
 from django.urls import path
 
 from . import views
+from . import last_five_questions
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -10,5 +11,4 @@ urlpatterns = [
     path('<int:question_id>/results/', views.results, name='results'),
     # ex: /polls/5/vote/
     path('<int:question_id>/vote/', views.vote, name='vote'),
-
 ]
