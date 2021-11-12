@@ -7,7 +7,7 @@
 https://docs.djangoproject.com/en/3.2/intro/tutorial02/
 
 ## Steps
-1. Update [polls/models.py](mysite/polls/models.py) to contain code bellow
+1. Update [polls/models.py](mysite2/polls/models.py) to contain code bellow
 ```python
 # polls/models.py
 import datetime
@@ -31,7 +31,7 @@ class Choice(models.Model):
         return self.choice_text
 ```
 
-2. Update `INSTALLED_APPS` in [mysite/settings.py](mysite/mysite/settings.py) to contain 'polls.apps.PollsConfig'
+2. Update `INSTALLED_APPS` in [mysite/settings.py](mysite2/mysite2/settings.py) to contain 'polls.apps.PollsConfig'
 
 3. Update polls code in manage.py - `python3.9 manage.py makemigrations polls`
 ```buildoutcfg
@@ -42,18 +42,18 @@ Migrations for 'polls':
     - Create model Choice
 ```
 
-4. Update database as a result of the migration in step 3 - `python3.9 manage.py sqlmigrate polls 0001` 
+4. Update database as a result of the migration in step 3 - `cd $HOME/mysite2 ; python3.9 manage.py sqlmigrate polls 0001` 
 
 5. Repeat step 3 (`python3.9 manage.py makemigrations polls`) to attach the created tables
 
 ## API
-0. Assert that the web application is running - `cd mysite ; python3.9 manage.py runserver`
+0. Assert that the web application is running - `cd $HOME/mysite2 ; python3.9 manage.py runserver`
 
 
 1. Access the API interface - `python3.9 manage.py shell`
 
 
-2. Create a new question (based on [polls/models.py](mysite/polls/models.py)) and save in the database
+2. Create a new question (based on [polls/models.py](mysite2/polls/models.py)) and save in the database
 ```python
 from polls.models import Choice, Question
 from django.utils import timezone

@@ -4,7 +4,7 @@ https://docs.djangoproject.com/en/3.2/intro/tutorial03/
 
 ## Argument Options
 
-1. Update [polls/views.py](mysite/polls/views.py) to support different types of questions
+1. Update [polls/views.py](mysite2/polls/views.py) to support different types of questions
 ```python
 from django.http import HttpResponse
 
@@ -19,12 +19,14 @@ def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 ```
 
-2. Updated [polls/urls.py](mysite/polls/urls.py) to support the newly added modules 
+2. Updated [polls/urls.py](mysite2/polls/urls.py) to support the newly added modules 
 ```python
 from django.urls import path
 from . import views
 
 urlpatterns = [
+    # ex: /polls/
+    path('', views.index, name='index'),
     # ex: /polls/5/
     path('<int:question_id>/', views.detail, name='detail'),
     # ex: /polls/5/results/
@@ -46,7 +48,7 @@ urlpatterns = [
   2. raising an exception such as _Http404_
 
 **Example**: displays the latest 5 poll questions in the system, separated by commas, according to publication date
-1. Update [polls/views.py](mysite/polls/views.py) to have an updated index 
+1. Update [polls/views.py](mysite2/polls/views.py) to have an updated index 
 ```python
 from django.shortcuts import render
 from django.template import loader
@@ -60,7 +62,7 @@ def index(request):
     return render(request, 'polls/index.html', {})
 ```
 
-2. Create [polls/index.html](mysite/polls/templates/polls/index.html) which contains to read [polls/views.py](mysite/polls/views.py)
+2. Create [polls/index.html](mysite2/polls/templates/polls/index.html) which contains to read [polls/views.py](mysite2/polls/views.py)
 ```html
 {% if latest_question_list %}
     <ul>
@@ -73,4 +75,14 @@ def index(request):
 {% endif %}
 ```
 
-3. 
+3. Update migration process 
+```bash
+cd $HOME/mysite2
+python3.9 manage.py makemigrations 
+python3.9 manage.py migrate
+python3.9 manage.py showmigrations
+python3.9 manage.py migrate polls 001 
+pyton3.9 manage.py migrate polls
+```
+
+4. To validate - http://127.0.0.1:8000/polls/ 
