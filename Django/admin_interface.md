@@ -46,6 +46,15 @@ MIDDLEWARE_CLASSES = (
 
 3. Go to admin page & access using the created superuser - http://127.0.0.1:8000/admin/  
 
+If unable to access the admin page on http://127.0.0.1/admin, update [urls.py](mysite/mysiste/urls.py) to contain admin path
+```python
+from django.contrib import admin
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+```
 
 That interface will let you administrate Django groups and users, and all registered models in your app.
 

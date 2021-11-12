@@ -1,5 +1,12 @@
 # Setting Up Project & Application in Django
 
+**Project**: a collection of configuration and apps for a particular website. Project contain multiple apps. An app can be in multiple projects.
+
+**App(lication)**: A web application that does something  Examples: 
+   - Weblog system 
+   - a database of public records 
+   - a small poll app
+   
 ## Create a Project
 https://www.tutorialspoint.com/django/django_creating_project.htm 
 
@@ -30,6 +37,7 @@ python3.9 manage.py runserver ${IP}:${PORT}
 
 
 ## Creating an App  
+
 https://www.tutorialspoint.com/django/django_apps_life_cycle.htm
 
 1. Create application - create a "myapp" project with the following structure: 
@@ -44,3 +52,4 @@ myapp/
 ```
 
 
+## 
