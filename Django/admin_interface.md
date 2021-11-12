@@ -14,8 +14,7 @@ INSTALLED_APPS = (
    'django.contrib.contenttypes',
    'django.contrib.sessions',
    'django.contrib.messages',
-   'django.contrib.staticfiles',
-   'myapp'
+   'django.contrib.staticfiles'
 )
 ```
 
@@ -46,7 +45,7 @@ MIDDLEWARE_CLASSES = (
 
 3. Go to admin page & access using the created superuser - http://127.0.0.1:8000/admin/  
 
-If unable to access the admin page on http://127.0.0.1/admin, update [urls.py](mysite/mysiste/urls.py) to contain admin path
+If unable to access the admin page on http://127.0.0.1/admin, update [urls.py](myproject/myproject/urls.py) to contain admin path
 ```python
 from django.contrib import admin
 from django.urls import path

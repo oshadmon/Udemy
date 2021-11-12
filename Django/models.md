@@ -1,8 +1,10 @@
-# Models
+# Models & Database 
 
 * **Model** - your database layout, with additional metadata.
   * **Question** - question and a publication date
   * **Choice** - has two fields: the text of the choice and a vote tally. A choice is correlated to a question 
+
+https://docs.djangoproject.com/en/3.2/intro/tutorial02/
 
 ## Steps
 1. Update [polls/models.py](mysite/polls/models.py) to contain code bellow
@@ -44,5 +46,25 @@ Migrations for 'polls':
 
 5. Repeat step 3 (`python3.9 manage.py makemigrations polls`) to attach the created tables
 
+## API
+0. Assert that the web application is running - `cd mysite ; python3.9 manage.py runserver`
 
-The next step is to play with the [API](api.md) tools Django provides in order to test the models created.
+
+1. Access the API interface - `python3.9 manage.py shell`
+
+
+2. Create a new question (based on [polls/models.py](mysite/polls/models.py)) and save in the database
+```python
+from polls.models import Choice, Question
+from polls.models import Choice, Question
+
+# create a new question
+q = Question(question_text="What's new?", pub_date=timezone.now())
+
+# save question
+q.save()
+
+# view all questions 
+Question.objects.all()
+```
+

@@ -50,6 +50,3 @@ myapp/
    tests.py     <-- unit tests
    views.py     <-- application views
 ```
-
-
-## 
