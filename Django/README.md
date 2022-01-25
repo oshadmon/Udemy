@@ -19,6 +19,8 @@ Sections are based on the [mysite/]() directory; where each directory is an impr
 ## Sites Used
 * [TutorialPoint](https://www.tutorialspoint.com/django/index.htm)
 * [Django Documentation](https://docs.djangoproject.com/en/3.2/) 
+* [EduCuba](https://www.educba.com/software-development/software-development-tutorials/django-tutorial/)
+
 
 ## Requirement
 For this project we are using `python3.9`  
