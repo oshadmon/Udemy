@@ -1,6 +1,7 @@
 # Install as Service
-The following install process is done on an Ubuntu 20.04 LTS using directions provided by [TecAdmin](https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-20-04/#:~:text=1%20How%20to%20Install%20Apache%20Kafka%20on%20Ubuntu,Step%205%20%E2%80%93%20Create%20a%20Topic%20in%20Kafka) (last updated February 2022)
+The following installation process is done on an Ubuntu 20.04 LTS using directions provided by [TecAdmin](https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-20-04/#:~:text=1%20How%20to%20Install%20Apache%20Kafka%20on%20Ubuntu,Step%205%20%E2%80%93%20Create%20a%20Topic%20in%20Kafka) (last updated February 2022)
 
+## Install Process
 1. Update + Install Java
 ```shell
 sudo apt-get -y update 
@@ -73,4 +74,42 @@ sudo apt-get -y update
 ```bash
 sudo systemctl start zookeeper
 sudo systemctl status zookeeper
+```
+
+## Configuring Remote access
+1. Go to `/usr/local/kafka`
+```bash
+cd /usr/local/kafka
+```
+
+2. Open `config/server.properties`
+```bash
+sudo vim config/server.properties
+```
+
+3. Update line 31
+```properties
+# Original 
+#listeners=PLAINTEXT://:9092
+
+# Should be 
+listeners=PLAINTEXT://${USER_IP}:9092
+```
+
+3. Update line 36
+```properties
+# Original
+#advertised.listeners=PLAINTEXT://:9092
+
+# Should be 
+advertised.listeners=PLAINTEXT://${IP}:9092
+```
+
+4. Restart _Zookeeper_ & _Kafka_
+```bash 
+for process in zookeeper kafka
+do
+    sudo systemctl stop ${process}
+    sudo systemctl start ${process}
+done
 ```
