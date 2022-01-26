@@ -17,7 +17,7 @@ tar -xzvf kafka_2.13-3.1.0.tgz
 
 3. Move new kafka directory into `/usr/local/kafaka`
 ```shell
-sudo kafka_2.13-3.1.0 /usr/local/kafka
+sudo mv kafka_2.13-3.1.0 /usr/local/kafka
 ```
 
 4. Create [Zookeeper](https://zookeeper.apache.org/) service file - centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. 
