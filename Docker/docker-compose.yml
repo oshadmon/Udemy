@@ -1,0 +1,18 @@
+# sample docker-compose.yml for Postgres
+version: "3"
+services:
+  # when updating POSGTRES_USER or POSTGRES_PASSWORD, make sure to update the "DB_USER" env variable in anylog-node
+  database:
+    image: postgres:14.0-alpine
+    container_name: postgres
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      - POSTGRES_USER=ori
+      - POSTGRES_PASSWORD=demo
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+    pgdata:
+      external: false

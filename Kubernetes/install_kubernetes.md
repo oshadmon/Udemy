@@ -36,7 +36,6 @@ kubectl version
 ## Kompose
 Kompose is a tool to migrate from [docker-compose](https://docs.docker.com/compose/) to Kubernetes  
 
-## Install 
 1. Download Kompose from GitHub
 ```bash
 curl -L https://github.com/kubernetes/kompose/releases/download/v1.18.0/kompose-linux-amd64 -o kompose
@@ -50,8 +49,3 @@ sudo mv ./kompose /usr/local/bin/kompose
 # validate version
 kompose version
 ```
-
-
-
-## Other sites
-* https://kubernetes.io/docs/reference/kubectl/overview/ 
