@@ -14,7 +14,13 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 newgrp docker
 
-sudo apt-get -y update 
+sudo apt-get -y update
+
+# validate
+docker --version
+<< COMMENT
+Docker version 20.10.7, build 20.10.7-0ubuntu5~20.04.2
+COMMENT  
 ```
 
 ## kompose
