@@ -45,3 +45,7 @@ kubectl describe pod ${POD_NAME}
 ```commandline
 kubectl logs ${POD_NAME} 
 ```
+* Port-Forwarding 
+```commandline
+kubectl port-forward --address=${LOCAL_IP} service/${SERVICE_NAME} ${PORT}:${PORT}
+```
