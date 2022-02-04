@@ -30,7 +30,7 @@ sudo apt-get -y update
 sudo apt-get -y install curl 
 curl -L https://github.com/kubernetes/kompose/releases/download/v1.26.1/kompose-linux-amd64 -o kompose
 chmod +x kompose
-sudo mv ./kompose /usr/local/bin/kompose
+sudo install ./kompose /usr/local/bin/kompose
 sudo apt-get update
 
 # Validate 
