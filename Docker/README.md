@@ -12,7 +12,7 @@
   * [Images](images.md) 
 * [Networking](networking.md)
 * [Presistent Data & Volumes](persistent_data.md)
-* Docker Composer
+* [Docker Composer](docker-compose.md)
 * Orchestration
 * Swarm
 * Kubernetes (K8s)

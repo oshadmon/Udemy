@@ -1,18 +1,29 @@
 # sample docker-compose.yml for Postgres
-version: "3"
+# Drupal site with psql
+version: "3.3"
 services:
-  # when updating POSGTRES_USER or POSTGRES_PASSWORD, make sure to update the "DB_USER" env variable in anylog-node
-  database:
-    image: postgres:14.0-alpine
-    container_name: postgres
-    network_mode: host
-    stdin_open: true
-    tty: true
-    environment:
-      - POSTGRES_USER=ori
-      - POSTGRES_PASSWORD=demo
+  drupal:
+    image: drupal:latest
+    ports:
+      - '80:80'
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - drupal_modules:/var/www/html/modules
+      - drupal_profiles:/var/www/html/profiles
+      - drupal_themes:/var/www/html/themes
+      - drupal_sites:/var/www/html/sites
+    restart: always
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: your_postgres_password
+    volumes:
+        - db_data:/var/lib/postgresql/data
+    restart: always
+
 volumes:
-    pgdata:
-      external: false
+  drupal_modules:
+  drupal_profiles:
+  drupal_themes:
+  drupal_sites:
+  db_data:
