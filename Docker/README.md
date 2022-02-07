@@ -15,5 +15,5 @@
 * [Docker Composer](docker-compose.md)
 * Orchestration
 * Swarm
-* Kubernetes (K8s)
+* [Kubernetes (K8s)](../Kubernetes) 
 * Swarm vs K8s
