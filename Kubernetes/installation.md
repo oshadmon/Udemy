@@ -3,7 +3,7 @@
 Sample installation was done on _Ubuntu 20.04_. The shared links provide information for other operating systems. 
 
 ## Docker 
-Install [docker](../Docker)
+Install [docker](../Docker Mastery with Kubernetes & Swarm)
 ```bash
 sudo apt-get -y update 
 sudo apt-get -y install docker.io docker-compose 

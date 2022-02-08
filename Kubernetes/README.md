@@ -8,7 +8,7 @@ The following discuses migrating docker-compose into Kubernetes -- Based on [Dig
 
 
 ## Prerequisites
-* [Docker](../Docker/docker_io_install.sh)
+* [Docker](../Docker%20Mastery%20with%20Kubernetes%20&%20Swarm/Docker/docker_io_install.sh)
 
 
 ## Table of Content

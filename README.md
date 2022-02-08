@@ -3,7 +3,7 @@ The following are notes from different online courses taken overtime
 
 ## Courses
 * [Django](Django/)
-* [Docker](Docker/)
+* [Docker](Docker Mastery with Kubernetes & Swarm/)
    * [Docker Mastery with Kubernetes + Swarm from a Docker Captain](https://www.udemy.com/course/docker-mastery/)
 * [EdgeX](EdgeX/)
   * self-taught
