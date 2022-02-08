@@ -27,5 +27,5 @@
 
 
 ## Table of Content
-* Install 
+* [Basics](Kubernetes%20Basics.md)
 * [Self-Taught Kubernetes](../../Kubernetes) 
