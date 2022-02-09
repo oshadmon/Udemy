@@ -11,7 +11,7 @@
 **Kubernetes vs Swarm**
 * Both are container orchestrators 
 * Both sold platforms 
-* swarm is easier to deploy & manage 
+* [swarm](../Swarm/) is easier to deploy & manage 
 * kubernetes has more features & great flexibility 
 
 | Swarm | Kubernetes | 
@@ -28,4 +28,12 @@
 
 ## Table of Content
 * [Basics](Kubernetes%20Basics.md)
+  * Definitions
+  * Install 
+  * Basic commands
+* [Deployment](Deployment.md)
+  * CLI 
+  * Replication
+  * Inspection
+* [Networking](Networking.md)
 * [Self-Taught Kubernetes](../../Kubernetes) 
