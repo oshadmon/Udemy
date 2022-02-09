@@ -39,4 +39,8 @@
   * Definitions
   * Basic deployment and executing `cURL`
 * [Management](Management.md)
+  * Basic Functions & definitions
+  * Sample YAML 
+  * Management Approaches 
+  * Future of _kubectl_
 * [Self-Taught Kubernetes](../../Kubernetes) 
