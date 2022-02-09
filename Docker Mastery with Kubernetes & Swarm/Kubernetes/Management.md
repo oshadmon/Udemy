@@ -51,18 +51,67 @@ status: {}
 ```
 
 ## Management Approaches
-
-| Imperative Commands | Imperative Objects | Declarative Objects | 
-| ------------------- | ------------------- | ------------------- |
-| Used for dev/learning/personal projects | utilizing files instead for production | only using YAML |
-| | save changes | best for production | 
-| hard to automate | hard to automate | easy to automate | 
-| | | harder to understand and predict changes |
-| Commands Used <br><ul><li>`run`<li>`expose`<li>`scale`<li>`edit`<li>`create`<li>`deploy`</li></ul> | Commands Used: <b><ul><li>`create -f`<li>`replace -f`<li>`delete -f`</li></ul>  |Commands Used: <b><ul><li>`apply -f`</li></ul>  |
-
 * Do not mix the three approaches 
 * Learn imperative CLI 
 * Use YAML 
+
+<table>
+  <tr>
+    <th></th>
+    <th>Imperative Commands</th>
+    <th>Imperative Objects</th>
+    <th>Declarative Objects</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Used for dev/learning/personal projects</td>
+    <td>utilizing files instead for production</td>
+    <td>only using YAML</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Save Changes</td>
+    <td>Best for production</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>hard to automate</td>
+    <td>hard to automate</td>
+    <td>easy to automate</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>harder to understand and predict changes</td>
+  </tr>
+  <tr>
+    <th>Utilized Commands</th>
+    <td valign="top">
+      <ul valign="top">
+        <li>run</li>
+        <li>expose</li>
+        <li>scale</li>
+        <li>edit</li>
+        <li>create</li>
+        <li>deploy</li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul valign="top">
+        <li>create -f</li>
+        <li>replace -f</li>
+        <li>delete -f</li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul valign="top">
+        <li>apply -f</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 
 ## Future of kubectl
