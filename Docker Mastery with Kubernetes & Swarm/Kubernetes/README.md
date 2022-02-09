@@ -36,4 +36,7 @@
   * Replication
   * Inspection
 * [Networking](Networking.md)
+  * Definitions
+  * Basic deployment and executing `cURL`
+* [Management](Management.md)
 * [Self-Taught Kubernetes](../../Kubernetes) 
