@@ -25,8 +25,15 @@
     * [kadakoda](https://www.katacoda.com/) - has an array _sandboxes_ to tru different tools
 * [Install Docs](../../Kubernetes/installation.md)
 
+### Kubernetes Dashboard
+* [Kubernetes Dashboard](https://github.com/kubernetes/dashboard)
+* Not deployed by default
+* Companies were hacked using the dashboard (due to no authentication)
+
 
 ## Kubectl commands
 * `kubectl run` - pod creation
 * `kubectl create` - create resource via _CLI_ or _YAML_
 * `kubectl apply` - deploy / update via _YAML_
+
+
