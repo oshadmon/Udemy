@@ -24,7 +24,7 @@ fi
 
 # Install docker 
 sudo apt-get update
-sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose
+sudo apt-get -y install docker.io docker-compose
 
 # Install Qemu 
 sudo apt-get -y install qemu qemu-user-static
