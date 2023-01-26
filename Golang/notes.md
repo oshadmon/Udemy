@@ -75,5 +75,12 @@ func main(){
     fmt.Printf("A - %d | B - %d | C - %d | D - %d | F - %d\n", A, B, C, D, F)
 }
 ```
+* **Array** - fixed series of elements of a given type 
+* **Slice** - window on an underlying array 
+  * has changeable size upto the size of the associated array 
+  * _Point_: start of the slice
+  * _Length_: number of elements in the slize 
+  * _Capacity_: number of values in the slice
 
-     
+* **hash table**: key/value pair table 
+* 
