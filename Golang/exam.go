@@ -1,16 +1,59 @@
 package main
 
-import (
-	"fmt"
-)
 
-/*
-Write a program which prompts the user to enter a floating point number and prints the integer
-which is a truncated version of the floating point number that was entered.
-Truncation is the process of removing the digits to the right of the decimal place.
-*/
-func main() {
-  s := make([]int, 0, 3)
-  s = append(s, 100)
-  fmt.Println(len(s), cap(s))
+import(
+	"fmt"
+	"bufio"
+
+	"os"
+
+
+)
+type name struct{
+
+	fname string
+
+	lname string
+
 }
+
+
+func main(){
+
+	fmt.Print("Enter the file name (full)=")
+
+	var n string
+
+	fmt.Scanln(&n)
+
+
+	f, _ := os.Open(n)
+
+	fileScanner := bufio.NewScanner(f)
+
+	fileScanner.Split(bufio.ScanWords)
+
+	var names []name
+
+
+	for fileScanner.Scan(){
+
+		var nm name
+
+		nm.fname = fileScanner.Text()
+
+		fileScanner.Scan()
+
+		nm.lname = fileScanner.Text()
+
+		names=append(names,nm)
+
+	}
+
+
+	for _, v:=range names{
+
+		fmt.Printf("First name: %s \tLast name: %s\n",v.fname,v.lname)
+
+	}
+}.

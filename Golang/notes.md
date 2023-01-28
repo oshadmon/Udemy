@@ -82,5 +82,9 @@ func main(){
   * _Length_: number of elements in the slize 
   * _Capacity_: number of values in the slice
 
-* **hash table**: key/value pair table 
-* 
+* **hash table**: key/value pair table
+
+
+## Protocols & Formats 
+* **Requests for Comments** (**RFC**) - definitions of internet protocols & formats  
+  * 
