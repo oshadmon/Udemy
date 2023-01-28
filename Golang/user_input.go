@@ -1,11 +1,19 @@
 package main
-import "fmt"
 
-func main(){
-    var apples int
-//     var num int
+import (
+    "flag"
+    "fmt"
+)
 
-    fmt.Printf("Number of Apples? ")
-    fmt.Scan(&apples)
-    fmt.Printf("%d\n", apples)
+func main() {
+    var name string
+
+    flag.StringVar(&name, "name", "John Doe", "Your name")
+
+    var age int
+    flag.IntVar(&age, "age", 25, "Your age")
+
+    flag.Parse()
+
+    fmt.Printf("Hello, %s! You are %d years old.\n", name, age)
 }
