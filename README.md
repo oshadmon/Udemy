@@ -14,4 +14,6 @@ The following are notes from different online courses taken overtime
   * self-taught
 * [TypeScript](TypeScript/)
    * [Understanding TypeScript 2020 Edition](https://www.udemy.com/course/understanding-typescript) 
+* [Go Programing](Golang/)
+  * [Golang Getting Started](https://www.coursera.org/learn/golang-getting-started)
 
