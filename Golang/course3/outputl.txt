@@ -1,0 +1,30 @@
+starting to eat 1
+finishing eating 1
+starting to eat 2
+finishing eating 2
+starting to eat 3
+finishing eating 3
+starting to eat 5
+finishing eating 5
+starting to eat 1
+finishing eating 1
+starting to eat 4
+finishing eating 4
+starting to eat 2
+finishing eating 2
+starting to eat 5
+finishing eating 5
+starting to eat 1
+finishing eating 1
+starting to eat 4
+finishing eating 4
+starting to eat 3
+finishing eating 3
+starting to eat 5
+finishing eating 5
+starting to eat 4
+finishing eating 4
+starting to eat 2
+finishing eating 2
+starting to eat 3
+finishing eating 3
