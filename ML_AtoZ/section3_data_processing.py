@@ -3,6 +3,7 @@ import pandas
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import LabelEncoder
 
 # import data set
 dataset = pandas.read_csv('csv_files/Data.csv')
@@ -19,4 +20,9 @@ ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remaind
 x = numpy.array(ct.fit_transform(x))
 print(x)
 
-# encoding dependent
+# encoding dependent - convert yes/no to 1/0
+le = LabelEncoder()
+y = le.fit_transform(y)
+print(y)
+
+
