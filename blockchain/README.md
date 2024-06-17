@@ -10,4 +10,9 @@ URL: https://www.coursera.org/specializations/blockchain?skipBrowseRedirect=true
   * [PoW vs PoS](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
   * [Consensus Protocols](https://www.coindesk.com/markets/2017/03/04/a-short-guide-to-blockchain-consensus-protocols/)
 
+* [Remix IDE]
+  * [IDE](https://remix.ethereum.org/)
+  * [Solidity Coding Guide](https://blockgeeks.com/guides/solidity/)
+  * [Remix RDT](https://remix-ide.readthedocs.io/en/latest/index.html)
+  * 
     
