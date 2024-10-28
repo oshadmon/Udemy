@@ -4,7 +4,7 @@
   * [The Internet of Money](https://www.amazon.com/Internet-Money-Andreas-M-Antonopoulos/dp/194791006X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1559232641&sr=8-3)
   * [Blockchain Basics](https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps-dp-1484226038/dp/1484226038/ref=mt_paperback?_encoding=UTF8&me=&qid=1559232841https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps-dp-1484226038/dp/1484226038/ref=mt_paperback?_encoding=UTF8&me=&qid=1559232841)
 
-## Module 1
+## Module I
 
 ### Foundations of Blockchain and Digital Currencies
 
@@ -67,7 +67,35 @@ National currencies.
 Ensure integrity in a distributed system.
 
 9. Suppose your local economy is experiencing double-digit inflation. How will the value of your bitcoin holdings change?
-It is not possible to determine precisely how bitcoin value will change because it is not tied to national or institutional banks.
+It is not possible to determine precisely how bitcoin value will change because it is not tied to national or 
+institutional banks.
 
 10. Why is bitcoin so revolutionary? (Choose the BEST answer.)
 It allows monetary transactions to take place in a distributed, decentralized manner without needing to trust a central authority.
+
+
+## Module II
+#### Assignment 1 
+This week we're considering blockchain architectural structures. There are many different types of distributed system 
+architecture configurations. How does the software architecture system allow the blockchain to manage user interactions 
+efficiently and transparently?  
+
+The blockchain is a way to manage P2P networks in a decentralized manner using a shared ledger in order to store data 
+across the network. Essentially decentralizing storage of data. 
+
+Whether using a tool in a public or private setting, the ultimate goal is a decentralized network that has the ability to
+validate transactions via Proof of Work (PoW)1 or Proof of Stake (PoS)2.
+
+Since there are multiple ways by which to utilize / deploy a blockchain, it ultimately depends on the goal of the 
+product/services being offered and who the "customers" (whether miners, stakeholder or users) are. For example a 
+blockchain network that's used for finance (example LitCoin) may look similar to one used by IoT devices (example IoTA), 
+to the naked eye, when in reality the underlying work is substantially different.
+
+Like with any product, the implemented architecture can cause a company to either make-it or break-it, as it influences 
+everything from performance, to ease of use, and even who would use the product. So while, blockchain is a great tool 
+to build decentralization on to of, how and which flavor is used is the key, rather than just using it as a _keyword_.  
+
+1. Proof of Work is the mechanism for minors to validate new blocks using complex mathematical algorithems 
+2. Proof of Stake is the mechanism for validation of new blocks based on their stake (number of coins they hold)
+
+
