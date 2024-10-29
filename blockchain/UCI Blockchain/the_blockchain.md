@@ -98,4 +98,68 @@ to build decentralization on to of, how and which flavor is used is the key, rat
 1. Proof of Work is the mechanism for minors to validate new blocks using complex mathematical algorithems 
 2. Proof of Stake is the mechanism for validation of new blocks based on their stake (number of coins they hold)
 
+## Module III
+### Assignment I 
+This week, let’s explore what constitutes a peer-to-peer system. Consider other prominent online peer-to-peer software 
+systems and discuss their similarities and differences to a blockchain system such as the Ethereum peer-to-peer system.
+
+Peer-to-Peer (P2P) is the idea that 2 (or more) machines are able to communicate with one another. The most common form 
+of P2P is an internet network. The blockchain is similar to the internet as each account has a unique address  
+that's used to identify it. The main difference between the internet and the blockchain is that when using the internet
+the address (URL) is used ot access the machine one wants to reach. While with the blockchain an address is used to inform 
+others who signed the block to the ledger.
+
+When looking at Ethereum in specific, the signed block is usually associated with someone paying / giving a service, with
+an agreement that's non-fungible, thus can be legal binding. 
+
+
+### Quiz 
+1. Which one of the following does NOT describe a peer-to-peer system?
+
+One node serves as a dispatcher ensuring reliable point-to-point communication among the others.
+
+2. What is the relationship between the blockchain and a peer-to-peer system?
+
+Software developers sharing code directly with each other.
+
+3. In order for individuals to trust making purchases through a peer-to-peer system (such as eBay), that system needs to provide assurance that it CANNOT be compromised by (choose ALL that apply).
+
+- Technology failures
+- Malevolent participants
+
+4. Ideally, one needs to know the number of nodes and their trustworthiness in order to maintain the integrity of a peer-to-peer system. If this is not possible, then:
+
+The blockchain is probably the best option for ensuring system integrity.
+
+5. When we refer to blockchain as a data structure, we mean:
+
+Data organized into units called blocks.
+
+6. When we refer to blockchain as an algorithm, we mean:
+
+The sequence of computer instructions that implement blockchain functionality.
+
+7. When we refer to blockchain as a suite of technologies, we include the following (choose the BEST answer):
+
+Blockchain-data structure, blockchain-algorithm, cryptography, and security technologies.
+
+## Module IV 
+### Assignment
+This week let’s engage in a discussion together about the tremendous business value that underpins a well designed and 
+fully operationalized peer-to-peer system. Discuss Bitcoin or other cryptocurrencies you are familiar with and like. 
+
+Blockchain was a revolution idea that allows for distributed database (ledger) that keeps a record of transactions. The 
+original developers of the blockchain want to create a decentralized currency that wasn't dependent on a centralized 
+government - Bitcoin. Since then, others have developed other crypto (decentralized) currencies (ex. Ethereum and Litcoin), 
+as well as use the blockchain's decentralization for security and data management. 
+
+One of the core technologies that were revolutionized through the blockchain was machine sharing; this can be in terms 
+of hard-disk storage (ex. FileCoin) or CPU services for complex querying (ex. CPUcoin). What this means, is that instead 
+of paying a cloud services provider (ex. AWS and Google Cloud) an arm and a leg for running things on large servers, 
+companies and individual were able to accomplish the same services for cheaper in a more distributed manner. Each of 
+these companies released (ICO-ed) their own coin in order to raise funds, while allowing for a unified form of payment
+for the service(s) their product allowed for on the blockchain.  
+
+
+
 
