@@ -41,7 +41,7 @@ The problem of uneven implementation of the Travel Rule across different jurisdi
 
 7. What should an originating VASP do if a transaction involves an unhosted wallet?
 
-Collect originator and beneficiary data directly from its customer
+Collect originator and beneficiary data directly from its customer   
 
 8. What are some possible penalties for non-compliance with the Travel Rule? (Select all that apply)
    * Fines
@@ -51,6 +51,39 @@ Collect originator and beneficiary data directly from its customer
 9. Which document contains the full definition of a VASP according to FATF?
 
 FATF Guidance for a Risk-based Approach to Virtual Assets and Virtual Asset Service Providers
+
+## Exam II 
+1. What is a significant challenge in identifying a counterparty VASP in cryptocurrency transactions?
+
+Lack of standardized global systems for verifying identities
+
+2. What approach is recommended to enhance the accuracy of counterparty identification?
+
+Combining self-declaration by the customer and advanced blockchain analysis techniques
+
+3. When managing undiscovered wallets, what is a recommended step for VASPs?
+
+Conducting a risk assessment
+
+4. What is the primary responsibility of a Travel Rule provider in the context of due diligence?
+
+Providing a channel for VASPs to request information from their counterparties
+
+5. What is the interoperability issue?
+
+The challenge of ensuring seamless data exchange across different cryptocurrency platforms and jurisdictions due to differing protocols and solutions for data transmission.
+
+6. When encountering a discrepancy in the beneficiary's name, what should the beneficiary VASP do if the name differs slightly from the records?
+
+Re-request the data from the originating VASP or suspend the transaction
+
+7. What is the best practice for including information about the originating VASP in transaction details?
+
+Include the information to enhance transparency
+
+8. Which method is considered the most reliable for verifying the ownership of a self-hosted wallet?
+
+Cryptographic signature techniques
 
  
 
